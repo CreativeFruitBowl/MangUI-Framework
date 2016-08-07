@@ -1,0 +1,175 @@
+/**
+ * Core MangUI stylesheet
+ *
+ * This stylesheet, by default, contains all of the styles for this WordPress theme. This document
+ * as it ships with MangUI only includes the MangUI framework files and you should add your files
+ * alongside - simply @import them along with the MangUI files.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.1
+ * @since   	1.0.0.alpha.1
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.1
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Settings
+ * [2]	Tools
+ * [3]	Generic
+ * [4]	Base
+ * [5]	Objects
+ * [6]	Components
+ * [7]	Theme
+ * [8]	Trumps
+ */
+
+
+/**
+ * [1]	Settings
+ *
+ *   •	Globally available settings and variables
+ *   •	Configure switches
+ *   •	Brand colours
+ *
+ * 		$color-ui:		#BADA55;
+ * 	 	$spacing-unit:	10px;
+ */
+
+
+
+
+
+/**
+ * [2]	Tools
+ *
+ *   •	Globally available tools
+ *   •	Public mixins
+ *   •	Helper functions
+ *
+ *   	@mixin font-brand() {
+ *   		font-family: "UI Font", sans-serif;
+ *   		font-weight: 400;
+ * 	   }
+ */
+
+
+
+
+
+/**
+ * [3]	Generic
+ *
+ *   •	Ground zero styles
+ *   •	Low-specificity, far-reaching
+ *   •	Resets; normalize.css; etc...
+ *
+ *   	* {
+ *   		-webkit-box-sizing: inherit;
+ *   		   -moz-box-sizing: inherit;
+ *   		        box-sizing: inherit;
+ *   	}
+ */
+
+
+
+
+
+/**
+ * [4]	Base
+ *
+ *   •	Unclasses HTML elements
+ *   •	h1 - h6; basic links; lists; etc
+ *   •	Last layer we see type selectors [e.g. `blockquote {}` or `a {}`]
+ *
+ *   	ul {
+ *   		list-style: square outside;
+ *   	}
+ */
+
+
+
+
+
+/**
+ * [5]	Objects
+ *
+ *   •	OOCSS
+ *   •	Design patterns
+ *   •	No cosmetics
+ *   • 	Begin using classes, exclusively
+ *   • 	Agnostically named [e.g. `.o-list {}`]
+ *
+ *   	.ui-list {
+ *   		margin: 0;
+ *   		padding: 0;
+ *   		list-style: none;
+ *   	}
+ *
+ *
+ * 			.ui-list__item {
+ * 		 		padding: $spacing-unit;
+ * 		  	}
+ */
+
+
+
+
+
+ /**
+ * [6]	Components
+ *
+ *   •	Designed pieces of UI
+ *   •	Still only using classes
+ *   •	More explicitly named [i.e. `.c-products-list {}`]
+ *
+ *   	.c-products {
+ *   		@include brand-font();
+ *   		border-top: 1px solid $colour-ui;
+ *   	}
+ */
+
+
+
+
+
+/**
+ * [7]	Themes
+ *
+ *   •	Styles that are specific to this usage
+ *   •	Colour variations
+ *   •	Styling differences
+ *
+ *   	.c-button--primary {
+ *   		color: $color--highlight;
+ *   		font-weight: bold;
+ *   	}
+ */
+
+
+
+
+
+/**
+ * [8]	Trumps
+ *
+ *   •	Overrides; helpers; utilities
+ *   •	Only affect one piece of the DOM at any time
+ *   •	Usually carry `!important`
+ *
+ *   	.bold {
+ *   		font-weight: bold !important;
+ *   	}
+ */
