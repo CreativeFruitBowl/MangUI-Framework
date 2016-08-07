@@ -1,0 +1,119 @@
+/**
+ * [Settings] MangUI default settings
+ *
+ * These are the default settings for the MangUI framework.
+ * 
+ * You must not edit this file - all changes are to be made in your own settings file which
+ * you can create at /settings/_settings.theme.default.scss. You mist import this file in
+ * screen.scss, just after where this document is imported.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.2
+ * @since   	1.0.0.alpha.2
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ *          Added responsive settings
+ *          Added size definitions
+ *          Added grid settings
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Responsive-ness of the build
+ * [2]	Size definitions
+ * [3]	Grid settings
+ */
+
+
+/**
+ * [1]	Responsive-ness of the build
+ *
+ * 		These settings are used throughout the framework to determine whether
+ * 		the build should be responsive or not.
+ *
+ * 		[a]	Is the build to be responsive?
+ * 		[b]	Is it to be built using the 'mobile first' approach?
+ * 		[c]	Will the website be responsive above the normal 960 pixel resolution?
+ */
+
+$mangui-is-responsive: 			true !default; 		// [a]
+$mangui-is-mobile-first: 		false !default; 	// [b]
+$mangui-is-responsive--large: 	false !default; 	// [c]
+
+
+
+
+
+/**
+ * [2]	Size definitions
+ *
+ * 		There are various sizes used throughout the framework and we need to ensure that they
+ * 		are kept consistent - such as for the grid system and the responsive breakpoints.
+ *
+ * 		**Remember**
+ * 		These sizes can, and should, be overwritten in your theme settings.
+ *
+ * 		[a]	Define our responsive breakpoints.
+ * 		[b]	Define the maximum width of the website containers.
+ * 		[c]	Define the vertical rhythm - this is used in Normalize amongst other sections
+ * 			of the framework.
+ * 		[d]	Define the base font size - 16px is a good base font size as it's easily divisible
+ * 			by 2, 4 and 8 which makes for rounder em and rem measurements.
+ * 		[e]	Define our base line height - 24px works well with the 16px base font size - the
+ * 			extra line height makes for easier reading with blocks of text.
+ */
+
+$mangui-breakpoints:			('palm' 	'(max-width: 480px)',
+								 'lap' 		'(min-width: 481px) and (max-width: 1023px)',
+								 'portable' '(max-width: 1023px)',
+								 'desk' 	'(min-width: 1024px)'
+								) !default;													// [a]
+
+$mangui-max-width: 				960px !default;												// [b]
+$mangui-vertical-rhythm:		24px !default;												// [c]
+$mangui-base-font-size:			16px !default;												// [d]
+$mangui-base-line-height:		24px !default;												// [e]
+
+
+
+
+
+/**
+ * [3]	Grid settings
+ *
+ * 		The grid system used in the framework, CSS Wizardry Grids, ships with a variety
+ * 		of settings that we can customise to ensure the code output is sufficient for our
+ * 		needs.
+ *
+ * 		[a]	Should we use push and pull grid classes for moving grid columns?
+ * 		[b]	Should we use 'silent classes' in the grid system - by default, no we shouldn't
+ * 			as descriptive classes are much easier to work with.
+ * 		[c]	As the grid system used inline-block grid items, either a markup fix is needed to
+ * 			remove the white space between elements or a CSS tweak is needed to remove the 
+ * 			whitespace. The framework favours the CSS tweak over markup change.
+ * 		[d]	Link the column gutters to our vertical rhythm variable for a better grid system.
+ * 		[e]	Define which breakpoints we should output for our grid classes - by default we're
+ * 			including them all.
+ */
+
+$mangui-use-pull: 				false !default; 									// [a]
+$mangui-use-push:				false !default; 									// [a]
+$mangui-use-silent-classes:		false !default; 									// [b]
+$mangui-use-markup-fix:			false !default; 									// [c]
+$mangui-gutter:					$mangui-vertical-rhythm !default; 					// [d]
+
+$mangui-breakpoint-has-widths:	('palm', 'lap', 'portable', 'desk') !default;		// [e]
+$mangui-breakpoint-has-push:	('palm', 'lap', 'portable', 'desk') !default;		// [e]
+$mangui-breakpoint-has-pull:	('palm', 'lap', 'portable', 'desk') !default;		// [e]

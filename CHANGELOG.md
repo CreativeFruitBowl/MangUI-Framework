@@ -10,3 +10,7 @@
 * Added Gulp and NPM requirements for concatenation and minification of SASS and Javascript assets 
 * Initialised folder structure for resources
 * Initialised folder structure for functions
+
+## 1.0.0.alpha.2
+
+* [SASS] Added default MangUI settings

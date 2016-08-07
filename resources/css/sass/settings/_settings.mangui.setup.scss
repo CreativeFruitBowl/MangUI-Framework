@@ -1,0 +1,53 @@
+/**
+ * [Settings] Setup variable names
+ *
+ * The MangUI framework uses other tools and frameworks for additional functionality - such as
+ * the CSS Wizardry grid system and Normalize.css. Some of these tools have a suite of variables
+ * that control the CSS output and we should map these to MangUI prefaced variable named for more
+ * consistent configuration within the framework.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.2
+ * @since   	1.0.0.alpha.2
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	CSS Wizardry Grids
+ */
+
+
+/**
+ * [1]	CSS Wizardry Grids
+ *
+ * 		Map our MangUI settings to CSS Wizardry grid system variables.
+ *
+ * 		[a]	We're simply renaming these variables - see the MangUI default
+ * 			settings for what each of these variables does.
+ */
+
+$push:					$mangui-use-push;					// [a]
+$pull:					$mangui-use-pull;					// [a]
+$use-markup-fix:		$mangui-use-markup-fix;				// [a]
+$responsive:			$mangui-is-responsive;				// [a]
+$mobile-first:			$mangui-is-mobile-first;			// [a]
+$gutter:				$mangui-gutter;						// [a]
+$use-silent-classes:	$mangui-use-silent-classes;			// [a]
+$breakpoints:			$mangui-breakpoints;				// [a]
+$breakpoint-has-widths:	$mangui-breakpoint-has-widths;		// [a]
+$breakpoint-has-push:	$mangui-breakpoint-has-push;		// [a]
+$breakpoint-has-pull:	$mangui-breakpoint-has-pull;		// [a]
