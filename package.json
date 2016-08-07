@@ -1,0 +1,21 @@
+{
+  "name": "mangui",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.7.0",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-cache": "~0.1.11",
+    "gulp-concat": "~2.2.0",
+    "gulp-imagemin": "~0.6.0",
+    "gulp-jshint": "~1.6.2",
+    "gulp-livereload": "~2.0.0",
+    "gulp-load-plugins": "~0.5.1",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-notify": "~1.3.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.5.0",
+    "gulp-uglify": "~0.3.0",
+    "tiny-lr": "0.0.7"
+  }
+}
