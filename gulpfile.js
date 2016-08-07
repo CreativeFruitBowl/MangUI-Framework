@@ -4,7 +4,7 @@
  * This is the default MangUI Gulp process for concatenating and minifying the SASS
  * and Javascript files within the build.
  *
- * @package  	MangUI
+ * @package  	mangui
  * @version  	1.0.0
  * @since   	1.0.0.alpha
  * @author  	Andi North <andi@mangopear.co.uk>
