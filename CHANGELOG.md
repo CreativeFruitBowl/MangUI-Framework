@@ -33,3 +33,4 @@
 * [SASS] Added CSS Wizardry grid system to the framework - added some additional grid layouts too.
 * [SASS] Fixed issues with SASS failing to compile
 * [SASS] Added containers to the framework
+* [SASS] Added the panel object to the framework - a panel is a full width section of a page - you'll have multiple panels in a page

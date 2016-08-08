@@ -1,0 +1,118 @@
+/**
+ * [Object] Panels
+ *
+ * A panel will consist of a container (possibly more than one) which will contain a title 
+ * and the content for the panel.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Core panel object
+ * [2]	Variants
+ */
+
+
+/**
+ * [1]	Core panel object
+ */
+
+.o-panel {
+	@include rempx(padding, $mangui-vertical-rhythm*2 $mangui-vertical-rhythm);
+	@extend %u-clearfix;
+}
+
+
+	.o-panel__heading {
+		position: relative;
+		text-align: center;
+		@include rempx(margin-top, -6px);
+		@include rempx(margin-bottom, $mangui-vertical-rhythm*2);
+		@include rempx(padding-bottom, $mangui-vertical-rhythm);
+
+
+		&::before {
+			left: 50%;
+			bottom: 0;
+			content: '';
+			opacity: 0.3;
+			position: absolute;
+			border-top: 5px solid;
+			@include rempx(width, 50px);
+			@include rempx(margin-left, -25px);
+		}
+	}
+
+
+	.o-panel__button-wrapper {
+		text-align: center;
+		@include rempx(margin-top, $mangui-vertical-rhythm);
+	}
+
+
+
+
+
+/**
+ * [2]	Variations
+ *
+ * 		[a]	Panel with greater padding
+ * 		[b]	Panel with lesser padding
+ * 		[c]	Panel with no padding
+ */
+
+
+/**
+ * [a]	Panel with greater padding
+ */
+
+.o-panel--wide {
+	@include rempx(padding, $mangui-vertical-rhythm*4 $mangui-vertical-rhythm*4);
+
+
+	@include mangui-breakpoint(palm) {
+		@include rempx(padding-left, $mangui-vertical-rhythm*2);
+		@include rempx(padding-right, $mangui-vertical-rhythm*2);
+	}
+}
+
+
+
+
+
+/**
+ * [b]	Panel with lesser padding
+ */
+
+.o-panel--narrow {
+	@include rempx(padding, $mangui-vertical-rhythm $mangui-vertical-rhythm/2);
+}
+
+
+
+
+
+/**
+ * [c]	Panel with no padding
+ */
+
+.o-panel--gutterless {
+	padding: 0;
+}
