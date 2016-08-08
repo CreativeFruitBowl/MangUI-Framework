@@ -1,0 +1,227 @@
+/**
+ * [Object] Navigations
+ *
+ * An object to display navigation bars or lists. Highly expandable and adaptable.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Navigation list
+ * [2]	Navigation items
+ * [3]	Navigation links / non-link text
+ * [4]	Sub navigations
+ * [5]	On hover (or focus), reveal the dropdowns
+ * [6]	Variation: Horizontal row
+ * [7]	Variation: A bigger more important navigation
+ * [8]	Variation: Full width navigation
+ */
+
+
+/**
+ * [1]	Navigation list
+ *
+ * 		This class should be on a <ul> or <ol> element (i.e. lists)
+ *
+ * 		[a]	Reset margins and padding to avoid affecting grid
+ */
+
+ .o-nav__list {
+	margin: 0; 	// [a]
+	padding: 0; // [a]
+}
+
+
+
+
+
+/**
+ * [2]	Navigation items
+ *
+ * 		This class should be on a <li> element (i.e. list items)
+ *
+ * 		[a]	Remove padding that may also be applied
+ * 		[b]	Remove bullets from the nav
+ * 		[c]	Set to relative so the absolute `.nav__sub` child behaves correctly
+ */
+
+.o-nav__item {
+	padding: 0; 		// [a]
+	display: block; 	// [b]
+	position: relative; // [c]
+}
+
+
+
+
+
+/**
+ * [3]	Navigation links / non-link text
+ *
+ * 		This class should be on <a> or <span> elements which are children of <li> elements
+ *
+ * 		[a]	Give the links some padding, using em's bases padding on font-size
+ * 		[b]	Make the entire link clickable, it's better for usability
+ */
+
+.o-nav__link,
+.o-nav__text {
+	display: block; 	// [a]
+	padding: 0.5em 1em; // [b]
+}
+
+
+
+
+
+/**
+ * [4]	Sub navigations
+ *
+ * 		[a]	Stop the sub navs from affecting layout
+ * 		[b]	Throw the dropdowns off screen
+ * 		[c]	Add some padding to the top and bottom
+ * 		[d]	Fade in the dropdowns, but delay the left transition to make sure the 
+ * 			dropdowns fade out too
+ * 		[e]	Fill the entire width of the dropdown
+ */
+
+.o-nav__list--sub {
+	opacity: 0;																			// [d]
+	position: absolute; 																// [a]
+	@include rempx(left, -2000px); 														// [b]
+	@include rempx(padding, ($mangui-vertical-rhythm/3)*2 0); 							// [c]
+	@include mangui-transition(ease-in-out 350ms opacity, ease-in-out 1ms 350ms left); 	// [d]
+
+
+	.o-nav__item {
+		width: 100%; 																	// [e]
+	}
+}
+
+
+
+
+
+/**
+ * [5]	On hover (or focus), reveal the dropdowns
+ *
+ * 		[a]	Align the dropdowns to the right position
+ * 		[b]	Fade them in...
+ * 		[c]	...smoothly
+ */
+
+.o-nav__item--has-sub {
+	&:hover,
+	&:focus {
+		.o-nav__list--sub {
+			left: 0; 												// [a]
+			opacity: 1; 											// [b]
+			@include mangui-transition(ease-in-out 350ms opacity); 	// [c]
+		}
+	}
+}
+
+
+
+
+
+/**
+ * [6]	Variation: Horizontal row
+ *
+ * 		[a]	Get the nav items to align without floating, allowing for greater 
+ * 			control over vertical-align
+ * 		[b]	Reset the above to get text working correctly
+ * 		[c]	The same for [a] but fixes Opera bug
+ * 		[d]	The same for [b] but fixes Opera bug
+ * 		[e]	Get the nav items in a row, without floating
+ */
+
+.o-nav--row {
+	letter-spacing: -0.31em; 		// [a]
+
+
+	.o-nav__item {
+		letter-spacing: normal; 	// [b]
+		word-spacing: normal; 		// [d]
+		display: inline-block; 		// [e]
+	}
+}
+
+
+.opera:-o-prefocus,
+.grid {
+	word-spacing: -0.43em; 			// [c]
+}
+
+
+
+
+
+/**
+ * [7]	Variation: A bigger more important navigation
+ *
+ * 		[a]	Make the font size bigger
+ * 		[b]	Increase padding accordingly
+ */
+
+.o-nav--big {
+	.o-nav__link,
+	.o-nav__text {
+		padding: 0.5em 1.4em;					// [b]
+		@include rempx(font-size, 20px);		// [a]
+	}
+
+
+	.o-nav__list--sub {
+		.o-nav__link,
+		.o-nav__text {
+			padding: 0.5em 1em;					// [b]
+			@include rempx(font-size, 16px);	// [a]
+		}
+	}
+}
+
+
+
+
+
+/**
+ * [8]	Variation: Full width navigation
+ *
+ * 		[a]	As flexbox isn't fully supported, we're using `display: table`
+ * 			and `display: table-cell`
+ * 		[b]	Get the nav to go full width
+ * 		[c]	Align the text to the centre
+ * 		[d]	Align all nav items to the top
+ */
+
+.o-nav--full {
+	.o-nav__list {
+		display: table; 			// [a]
+		width: 100%; 				// [b]
+	}
+
+
+		.o-nav__item {
+			display: table-cell; 	// [a]
+			text-align: center; 	// [c]
+			vertical-align: top; 	// [d]
+		}
+}
