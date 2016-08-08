@@ -75,16 +75,17 @@ $mangui-is-responsive--large: 	false !default; 	// [c]
  * 			extra line height makes for easier reading with blocks of text.
  */
 
-$mangui-breakpoints:			('palm' 	'(max-width: 480px)',
-								 'lap' 		'(min-width: 481px) and (max-width: 1023px)',
-								 'portable' '(max-width: 1023px)',
-								 'desk' 	'(min-width: 1024px)'
-								) !default;													// [a]
+$mangui-breakpoints:				('palm' 	'(max-width: 480px)',
+									 'lap' 		'(min-width: 481px) and (max-width: 1023px)',
+									 'portable' '(max-width: 1023px)',
+									 'desk' 	'(min-width: 1024px)'
+									) !default;													// [a]
 
-$mangui-max-width: 				960px !default;												// [b]
-$mangui-vertical-rhythm:		24px !default;												// [c]
-$mangui-base-font-size:			16px !default;												// [d]
-$mangui-base-line-height:		24px !default;												// [e]
+$mangui-max-width: 					960px !default;												// [b]
+$mangui-vertical-rhythm:			24px !default;												// [c]
+$mangui-base-font-size--unitless:	16 !default;												// [d]
+$mangui-base-font-size:				$mangui-base-font-size--unitless+px !default;				// [d]
+$mangui-base-line-height:			24px !default;												// [e]
 
 
 
