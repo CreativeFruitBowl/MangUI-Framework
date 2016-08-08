@@ -1,0 +1,52 @@
+/**
+ * [Base] Default page styles
+ *
+ * Base styles are the default styles for elements.
+ * **No class selectors allowed**
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Root elements
+ */
+
+
+/**
+ * [1]  Root elements
+ *
+ * 		[a]	Reset browser defaults
+ * 		[b]	Prevent website from being shorter than viewport
+ * 		[c]	Assign default font sizes and leading to ensure rem and 
+ * 			em measurements work as expected, it's all about setting the
+ * 			root font size
+ */
+
+html {
+    padding: 0;														// [a]
+	min-height: 100%;												// [b]
+    font-size: ($mangui-base-font-size / 16px) * 1em;				// [c]
+    line-height: $mangui-base-line-height / $mangui-base-font-size;	// [c]
+}
+
+
+	body {
+		min-height: 100%;											// [b]
+	}

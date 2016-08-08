@@ -29,3 +29,4 @@
 * [SASS] Added generic class (and SASS pseudo class) for accessibly hiding elements
 * [SASS] Added normalize.css
 * [SASS] Added generic rules for HTML elements that share spacing (lists, headings, tables etc)
+* [SASS] Added basic styling for core elements - html, body, headings, images, lists, links, quotes etc.

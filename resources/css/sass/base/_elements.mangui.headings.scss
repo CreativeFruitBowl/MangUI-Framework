@@ -1,0 +1,79 @@
+/**
+ * [Base] Default heading styles
+ *
+ * Base styles are the default styles for elements.
+ * **No class selectors allowed**
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Headings
+ */
+
+
+/**
+ * [1]  Headings
+ *
+ * 		[a]	Allow font colour to inherit
+ * 		[b]	Assign default font weights
+ * 		[c]	Assigned $variabled font-sizes
+ */
+
+h1 {
+	color: inherit;					// [a]
+	font-weight: 700;				// [b]
+	font-size: $size--heading-1;	// [c]
+}
+
+
+h2 {
+	color: inherit;					// [a]
+	font-weight: 700;				// [b]
+	font-size: $size--heading-2;	// [c]
+}
+
+
+h3 {
+	color: inherit;					// [a]
+	font-weight: 500;				// [b]
+	font-size: $size--heading-3;	// [c]
+}
+
+
+h4 {
+	color: inherit;					// [a]
+	font-weight: 700;				// [b]
+	font-size: $size--heading-4;	// [c]
+}
+
+
+h5 {
+	color: inherit;					// [a]
+	font-weight: 700;				// [b]
+	font-size: $size--heading-5;	// [c]
+}
+
+
+h6 {
+	color: inherit;					// [a]
+	font-weight: 700;				// [b]
+	font-size: $size--heading-6;	// [c]
+}

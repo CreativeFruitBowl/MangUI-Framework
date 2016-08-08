@@ -1,0 +1,50 @@
+/**
+ * [Base] Default link styles
+ *
+ * Base styles are the default styles for elements.
+ * **No class selectors allowed**
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Default links
+ */
+
+
+/**
+ * [1]  Default links
+ *
+ * 		[a]	Override browser behavour (for nicer styling)
+ * 		[b]	Use variabled colours
+ */
+
+a {
+    text-decoration: none;				// [a]
+    color: $colour--links;				// [b]
+    @extend %transition--250;
+
+
+    &:hover,
+    &:focus {
+        color: $colour--links-hover;	// [b]
+    }
+
+}

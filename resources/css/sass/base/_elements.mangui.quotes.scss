@@ -1,0 +1,65 @@
+/**
+ * [Base] Default quote styles
+ *
+ * Base styles are the default styles for elements.
+ * **No class selectors allowed**
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Blockquotes
+ */
+
+
+/**
+ * [1]  Blockquotes
+ */
+
+blockquote {
+	quotes: "\275D" "\275E" "\275D" "\275E";
+	margin-left: 0;
+	margin-right: 0;
+
+
+	p {
+		text-indent: -0.42em;
+
+
+		&:before {
+			content: "\275D";
+		}
+
+
+		&:after {
+			content: "\275E";
+		}
+
+
+		&:last-of-type {
+			margin-bottom: 0;
+
+
+			&:after {
+				content: "\275E";
+			}
+		}
+	}
+}
