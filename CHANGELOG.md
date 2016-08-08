@@ -31,3 +31,5 @@
 * [SASS] Added generic rules for HTML elements that share spacing (lists, headings, tables etc)
 * [SASS] Added basic styling for core elements - html, body, headings, images, lists, links, quotes etc.
 * [SASS] Added CSS Wizardry grid system to the framework - added some additional grid layouts too.
+* [SASS] Fixed issues with SASS failing to compile
+* [SASS] Added containers to the framework

@@ -1,0 +1,110 @@
+/**
+ * [Object] Containers
+ *
+ * This object adds containers to the framework - there are some default 
+ * sizes provided through the settings of the framework.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Containers
+ */
+
+
+/**
+ * [1]	Containers:
+ *
+ * 		[a]	Default container
+ * 		[b]	Padded container
+ * 		[c]	Containers with different widths
+ * 		[d]	Container alignments
+ */
+
+
+/**
+ * [a]	Default container:
+ *
+ * 		[i]	  Full width, up to a limit
+ * 		[ii]  Centre align the container
+ */
+
+.o-container,
+%o-container {
+	width: 100%; // [i]
+	margin-left: auto; // [ii]
+	margin-right: auto; // [ii]
+	max-width: $mangui-max-width; // [i]
+}
+
+
+
+
+
+/**
+ * [b]	Padded container:
+ *
+ * 		[i]   Give the containers some padding, based on theme $var
+ */
+
+.o-container--padded {
+	@include rempx(padding-left, $mangui-vertical-rhythm); // [i]
+	@include rempx(padding-right, $mangui-vertical-rhythm); // [i]
+}
+
+
+
+
+
+/**
+ * [c]	Different width containers:
+ *
+ * 		[i]   Very narrow container
+ * 		[ii]  Container optimised for readability
+ */
+
+.o-container--narrow {
+	@include rempx(max-width, $mangui-container--narrow); // [i]
+}
+
+
+.o-container--optimise-readability {
+	@include rempx(max-width, $mangui-container--readability); // [ii]
+}
+
+
+
+
+
+/**
+ * [d]	Container alignments:
+ *
+ * 		[i]   Left aligned container
+ * 		[ii]  Right aligned container
+ */
+
+.o-container--align-left {
+	margin-left: 0; // [i]
+}
+
+
+.o-container--align-right {
+	margin-right: 0; // [ii]
+}
