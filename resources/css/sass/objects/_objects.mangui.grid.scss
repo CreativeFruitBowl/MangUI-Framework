@@ -1,0 +1,297 @@
+/**
+ * [Object] Grids
+ *
+ * This document contains the core parts of our grid system. Note: this does not include the 
+ * grid columns - only the outer grid containers.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Default grid
+ * [2]	Variations
+ * [3]	Grid item variants
+ */
+
+
+/**
+ * [1]	Default grid
+ *
+ * 		[a]	Grid container
+ * 		[b]	Grid cells (items)
+ */
+
+
+/**
+ * [a]	Grid container
+ *
+ * 		[i]	  	Remove any margins and paddings that might affect grid systems.
+ * 		[ii]  	Allow grid system to be used on lists.
+ * 		[iii]	Apply a negative `margin-left` to negate the columns' gutters.
+ * 		[iv]	Get the `grid__item`'s to sit next to each other without whitespace.
+ * 		[v]		Opera fix instead of letter-spacing in [d].
+ */
+
+ .o-grid {
+	margin: 0; 							// [i]
+	padding: 0; 						// [i]
+	list-style: none; 					// [ii]
+	margin-left: -$mangui-gutter; 		// [iii]
+	letter-spacing: -0.31em; 			// [iv]
+}
+
+
+.opera:-o-prefocus,
+.grid {
+	word-spacing: -0.43em; 				// [v]
+}
+
+
+
+
+
+/**
+ * [b]	Grid cells (items)
+ *
+ * 		These rules are above the grid variants due to potential specificity wars otherwise.
+ *
+ * 		[i]	  	Set a default width for grid items
+ * 		[ii]  	Align columns to the top of each other
+ * 		[iii]	Reset the [letter|word]-spacing used in .o-grid
+ * 		[iv]	Cause columns to stack side-by-side
+ * 		[v]		Space columns apart from each other
+ */
+
+.o-grid__item {
+	width: 100%; 						// [i]
+	vertical-align: top; 				// [ii]
+	word-spacing: normal; 				// [iii]
+	display: inline-block; 				// [iv]
+	letter-spacing: normal; 			// [iii]
+	padding-left: $mangui-gutter; 		// [v]
+}
+
+
+
+
+
+/**
+ * [2]	Variants
+ *
+ * 		[a]	Reverse grid
+ * 		[b]	Gutterless grid
+ * 		[c]	Narrow grid
+ * 		[d]	Wide grid
+ * 		[e]	Right aligned grid
+ * 		[f]	Center aligned grid
+ * 		[g]	Middle aligned grid
+ * 		[h]	Bottom aligned grid
+ */
+
+
+/**
+ * [a]	Reverse grid
+ *
+ * 		Reversed grids allow you to structure your source in the opposite order to 
+ * 		how your rendered layout will appear.
+ *
+ * 		Extends `.o-grid`
+ */
+
+.o-grid--rev {
+	direction: rtl;
+	text-align: left;
+
+
+	> .o-grid__item {
+		direction: ltr;
+		text-align: left;
+	}
+}
+
+
+
+
+
+/**
+ * [b]	Gutterless grid
+ *
+ * 		Gutterless grids have all the properties of regular grids, minus any spacing.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--gutterless {
+	margin-left: 0;
+
+
+	> .o-grid__item {
+		padding-left: 0;
+	}
+}
+
+
+
+
+
+/**
+ * [c]	Narrow grid
+ *
+ * 		Grids with less spacing between columns.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--narrow {
+	margin-left: -($mangui-gutter / 2);
+
+
+	> .o-grid__item {
+		padding-left: $mangui-gutter / 2;
+	}
+}
+
+
+
+
+
+/**
+ * [d]	Wide grid
+ *
+ * 		Grids with greater spacing between columns.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--wide {
+	margin-left: -($mangui-gutter * 2);
+
+
+	> .o-grid__item {
+		padding-left: $mangui-gutter * 2;
+	}
+}
+
+
+
+
+
+/**
+ * [e]	Right aligned grid
+ *
+ *		Align the entire grid to the right.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--right {
+	text-align: right;
+
+
+	> .o-grid__item {
+		text-align: left;
+	}
+}
+
+
+
+
+
+/**
+ * [f]	Centre aligned grid
+ *
+ *		Centered grids align grid items centrally without needing to use push or pull.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--center {
+	text-align: center;
+
+
+	> .o-grid__item {
+		text-align: left;
+	}
+}
+
+
+
+
+
+/**
+ * [g]	Middle aligned grid
+ *
+ *		Align grid cells vertically.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--middle {
+	> .o-grid__item {
+		vertical-align: middle;
+	}
+}
+
+
+
+
+
+/**
+ * [h]	Bottom aligned grid
+ *
+ *		Align grid cells vertically.
+ *
+ * 		Extends `.o-grid`
+ */
+
+
+.o-grid--bottom {
+	> .o-grid__item {
+		vertical-align: bottom;
+	}
+}
+
+
+
+
+
+/**
+ * [3]	Grid item variants
+ */
+
+.o-grid__item--left {
+	text-align: left;
+}
+
+
+.o-grid__item--center {
+	text-align: center;
+}
+
+
+.o-grid__item--right {
+	text-align: right;
+}
