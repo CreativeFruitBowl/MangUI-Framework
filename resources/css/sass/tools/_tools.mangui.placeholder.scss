@@ -1,0 +1,67 @@
+/**
+ * [Tools] Placeholder for form inputs
+ *
+ * This is a simple mixin that avoids you needing to type out the syntax for form field
+ * placeholders manually.
+ *
+ * Take note of the `opacity: 1;` within the Firefox rules - this overrides default behavour
+ * in Firefox.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.2
+ * @since   	1.0.0.alpha.2
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	The mixin
+ */
+
+
+/**
+ * [1]	The mixin
+ *
+ * 		A simple mixin that does what it says, really.
+ *
+ * 		To use:
+ * 		@include mangui-placeholder() {
+ * 		    ... your styles go here
+ * 		}
+ */
+
+@mixin mangui-placeholder () {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+
+	&:-moz-placeholder {
+		opacity: 1;
+		@content;
+	}
+
+
+	&::-moz-placeholder {
+		opacity: 1;
+		@content;
+	}
+
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}

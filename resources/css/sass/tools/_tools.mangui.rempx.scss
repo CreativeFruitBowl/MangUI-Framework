@@ -1,0 +1,108 @@
+/**
+ * [Tools] Convert pixel based units to rem
+ *
+ * To enable your website to scale properly when a user zooms using their browser, em and rem
+ * based units should be used. Rem based units are better from a design point of view as they
+ * are relative to the body of the document and not to parent elements - like ems are.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.2
+ * @since   	1.0.0.alpha.2
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Variables
+ * [2]	Helper mixin
+ * [3]	Main mixin
+ */
+
+
+/**
+ * [1]	Variables
+ *
+ * 		[a]	Define the base font size for the rem value to work from
+ */
+
+$rem-base-font-size: $mangui-base-font-size--unitless !default;
+
+
+
+
+
+/**
+ * [2]	Helper mixin
+ * 
+ * 		The main mixin relies on a function to parse the integer from a value with a unit
+ */
+
+@function parseInt ($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+
+
+
+
+/**
+ * [3]	The main mixin
+ *
+ * 		[a]	Define empty vars to be populated later.
+ * 		[b]	Loop through each value provided in the mixin.
+ * 		[c]	If the value doesn't need to be converted (0, auto) use as is.
+ * 		[d]	If the value needs converting, split value to get unit and value.
+ * 		[e]	Append converted values to output.
+ * 		[f]	Output valid CSS with both rem and px values.
+ *
+ * 		To use:
+ *   	@include rempx(font-size, 16px);
+ */
+
+@mixin rempx ($property, $values) {
+	$px:  (); 																	// [a]
+	$rem: (); 																	// [a]
+
+
+	@each $value in $values {													// [b]
+		@if $value == 0 or $value == auto {										// [c]
+			$px:	append($px,  $value);										// [c]
+			$rem:	append($rem, $value);										// [c]
+		}
+
+
+		@else {
+			$unit: unit($value);												// [d]
+			$val: parseInt($value);												// [d]
+
+
+			@if $unit == "px" {													// [e]
+				$px:	append($px, $value);									// [e]
+				$rem:	append($rem, ($val / $rem-base-font-size * 1rem));		// [e]
+			}
+
+
+			@if $unit == "rem" {												// [e]
+				$px:	append($px, ($val * $rem-base-font-size * 1px));		// [e]
+				$rem:	append($rem, $value);									// [e]
+			}
+		}
+	}
+
+
+	#{$property}: $px; 															// [f]
+	#{$property}: $rem; 														// [f]
+}

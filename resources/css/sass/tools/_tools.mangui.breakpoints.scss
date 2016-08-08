@@ -1,0 +1,161 @@
+/**
+ * [Tools] Breakpoints
+ *
+ * CSS breakpoints are a necessity for any responsive layout and the MangUI breakpoints
+ * mixin allows you to use pre-defined sizes with keywords - how very useful!
+ *
+ * An suite of examples are contained at the bottom of this document for you to reference.
+ * 
+ * @package  	mangui
+ * @category	styles
+ * @version  	1.0.0.alpha.2
+ * @since   	1.0.0.alpha.2
+ * @author  	Andi North <andi@mangopear.co.uk>
+ * @link 		https://mangopear.co.uk/mangui/
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Breakpoint mixin
+ * [2]	Example usages
+ */
+
+
+/**
+ * [1]	Breakpoint mixin
+ *
+ * 		This is where the magic happens.
+ *
+ * 		[a]	Reset a variable required for our conditional statement to work.
+ *      [b]	Loop through each breakpoint in $mangui-breakpoints
+ *      [c]	Get the 'name' and 'declaration' from each breakpoint
+ *      [d]	If the name of the breakpoint matches our mixin variable
+ *      [e]	Tell the variable we've found it, so it doesn't continue through the if()
+ *      [f]	Output our media query, using the breakpoint declaration and the content provided
+ * 		    within the @include
+ *   	[g]	If $point did not match any of the breakpoints within $mangui-breakpoints
+ *    	[h]	Create a media query using the value of $point
+ */
+
+@mixin mangui-breakpoint($point) {
+	$mangui-found-breakpoint: false; 						// [a]
+
+	@each $mangui-breakpoint in $mangui-breakpoints { 		// [b]
+		$name: nth($mangui-breakpoint, 1); 					// [c]
+		$declaration: nth($mangui-breakpoint, 2); 			// [c]
+
+		@if $point == $name { 								// [d]
+			$mangui-found-breakpoint: true; 				// [e]
+
+			@media #{$declaration} { 						// [f]
+				@content; 									// [f]
+			}
+		}
+	}
+	
+
+	@if not $mangui-found-breakpoint { 						// [g]
+		@media ($point) { 									// [h]
+			@content;										// [f]
+		}
+	}
+}
+
+
+
+
+
+/**
+ * [2]	Example usages
+ *
+ * 		Here are a range of examples showing how to use the breakpoint mixin.
+ *
+ * 		[a]	For named breakpoints
+ * 		[b]	For unnamed breakpoints
+ * 		[c]	Where to use the mixin
+ */
+
+
+/**
+ * [a]	For named breakpoints
+ *
+ * 		Our named breakpoints are named in $mangui-breakpoints.
+ * 		
+ * 		By default they are:
+ * 		* desk
+ * 		* lap
+ * 		* portable
+ * 		* palm
+ */
+
+/*
+
+	@include mangui-breakpoint(desk) {
+		// Your SASS goes here
+	}
+
+ */
+
+
+/**
+ * [b]	For unnamed breakpoints
+ *
+ * 		Our named breakpoints are named in $mangui-breakpoints.
+ * 		
+ * 		By default they are:
+ * 		* desk
+ * 		* lap
+ * 		* portable
+ * 		* palm
+ */
+
+/*
+
+	@include mangui-breakpoint("min-width: 401px) and (max-width: 480px") {
+		// Your SASS goes here
+	}
+
+ */
+
+
+/**
+ * [c]	Where to use the mixin
+ *
+ * 		You can either use the mixin inline or as a block of SASS.
+ */
+
+/*
+
+	.selector {
+		color: #FFF;										// To show on all resolutions
+		@include mangui-breakpoint(palm) { color: #000; }	// To show on palm sized devices
+	}
+
+
+	OR ...
+
+
+	.selector-2 {
+		color: #FFF;
+		text-decoration: underline;
+	}
+
+	@include mangui-breakpoint(lap) {
+		.selector-2 {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+ */

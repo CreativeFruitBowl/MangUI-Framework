@@ -1,0 +1,75 @@
+/**
+ * [Tools] Transform
+ *
+ * Helper mixins to output valid CSS3 for transformations.
+ * 
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.2
+ * @since       1.0.0.alpha.2
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Transform
+ * [1]  Transform > Origin
+ */
+
+
+/**
+ * [1]  Transform
+ *
+ *      A simple mixin that outputs valid CSS3 code for transformations.
+ *
+ * 		To use:
+ *		.selector {
+ *			other-rules: values;
+ *			@include mangui-transform(rotate(45deg) translateY(-100px));
+ *		}
+ */
+
+@mixin mangui-transform($transition...) {
+	-webkit-transform: $transition;
+	   -moz-transform: $transition;
+		-ms-transform: $transition;
+		 -o-transform: $transition;
+			transform: $transition;
+}
+
+
+
+
+
+/**
+ * [1]  Transform > Origin
+ *
+ *      A simple mixin that outputs valid CSS3 code for setting
+ *      the origins of transformations.
+ *
+ * 		To use:
+ *		.selector {
+ *			other-rules: values;
+ *			@include mangui-transform-origin(0 50%);
+ *		}
+ */
+
+@mixin mangui-transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+	   -moz-transform-origin: $origin;
+		-ms-transform-origin: $origin;
+		 -o-transform-origin: $origin;
+			transform-origin: $origin;
+}

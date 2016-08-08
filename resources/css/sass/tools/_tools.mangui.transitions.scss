@@ -1,0 +1,130 @@
+/**
+ * [Tools] Transitions
+ *
+ * CSS3 transitions are an easy way to make an interface feel more polished and slick.
+ * These mixins allow you to easily add transtions to your SASS.
+ * 
+ * @package   mangui
+ * @category  styles
+ * @version   1.0.0.alpha.2
+ * @since     1.0.0.alpha.2
+ * @author    Andi North <andi@mangopear.co.uk>
+ * @link      https://mangopear.co.uk/mangui/
+ * @license   GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 0.1.0.alpha.2
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Transitions > Shorthand
+ * [2]  Transitions > Property
+ * [3]  Transitions > Duration
+ * [4]  Transitions > Timing function
+ * [5]  Transitions > Delay
+ */
+
+
+/**
+ * [1]  Transitions > Shorthand
+ *
+ *      A simple mixin that outputs valid CSS3.
+ *
+ *      To use:
+ *      @include mangui-transition(ease-in-out 350ms 100ms color);
+ */
+
+@mixin mangui-transition($transition...) {
+	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+		 -o-transition: $transition;
+			transition: $transition;
+}
+
+
+
+
+
+/**
+ * [2]  Transitions > Property
+ *
+ *      A simple mixin that outputs valid CSS3.
+ *
+ *      To use:
+ *      @include mangui-transition-property(color);
+ */
+
+@mixin mangui-transition-property($property...) {
+	-webkit-transition-property: $property;
+	   -moz-transition-property: $property;
+		 -o-transition-property: $property;
+			transition-property: $property;
+}
+
+
+
+
+
+/**
+ * [3]  Transitions > Duration
+ *
+ *      A simple mixin that outputs valid CSS3.
+ *
+ *      To use:
+ *      @include mangui-transition-duration(350ms);
+ */
+
+@mixin mangui-transition-duration($duration...) {
+	-webkit-transition-duration: $duration;
+	   -moz-transition-duration: $duration;
+		 -o-transition-duration: $duration;
+			transition-duration: $duration;
+}
+
+
+
+
+
+/**
+ * [4]  Transitions > Timing function
+ *
+ *      A simple mixin that outputs valid CSS3.
+ *
+ *      To use:
+ *      @include mangui-transition-timing-function(ease-in-out);
+ */
+
+@mixin mangui-transition-timing-function($timing...) {
+	-webkit-transition-timing-function: $timing;
+	   -moz-transition-timing-function: $timing;
+		 -o-transition-timing-function: $timing;
+			transition-timing-function: $timing;
+}
+
+
+
+
+
+/**
+ * [5]  Transitions > Delay
+ *
+ *      A simple mixin that outputs valid CSS3.
+ *
+ *      To use:
+ *      @include mangui-transition-delay(100ms);
+ */
+
+@mixin mangui-transition-delay($delay...) {
+	-webkit-transition-delay: $delay;
+	   -moz-transition-delay: $delay;
+		 -o-transition-delay: $delay;
+			transition-delay: $delay;
+}
