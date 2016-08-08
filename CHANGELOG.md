@@ -21,3 +21,11 @@
 * [SASS] Added tools for shading and tinting colours - use variables or HEX/RGB values - nice and simple
 * [SASS] Added tools for outputting CSS3 compliant transformations
 * [SASS] Added tools for creating transitions within SASS
+
+## 1.0.0.alpha.3
+
+* [SASS] Added generic box sizing values to ensure compatibility with containers and grids
+* [SASS] Added generic clearfix rule with class and SASS pseudo classes
+* [SASS] Added generic class (and SASS pseudo class) for accessibly hiding elements
+* [SASS] Added normalize.css
+* [SASS] Added generic rules for HTML elements that share spacing (lists, headings, tables etc)

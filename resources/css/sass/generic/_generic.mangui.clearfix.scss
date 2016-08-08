@@ -1,0 +1,58 @@
+/**
+ * [Tools] Clearfix
+ *
+ * Sometimes when you have multiple elements in a container that are floated
+ * the container can break.
+ *
+ * This fix is a common-place trick that fixes this issue.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Clearfix
+ */
+
+
+/**
+ * [1]	Clearfix:
+ *
+ * 		[a]	Standard clearfix for fixing float issues
+ * 			@link http://nicolasgallagher.com/micro-clearfix-hack/
+ * 		[b]	Single colon psuedo elements to ensure IE8 compat
+ * 		[c]	Add fix for IE7
+ */
+
+.u-clearfix,
+%u-clearfix {
+	&:before,
+	&:after { 			// [b]
+		content: " ";	// [a]
+		display: table;	// [a]
+	}
+
+
+	&:after { 			// [b]
+		clear: both;	// [a]
+	}
+
+
+	*zoom: 1; 			// [c]
+}

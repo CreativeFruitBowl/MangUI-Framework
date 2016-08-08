@@ -1,0 +1,67 @@
+/**
+ * [Tools] Box sizing
+ *
+ * Box sizing is how a browser calculates the width of elements - two options are available:
+ * content-box and border-box.
+ *
+ * For MangUI to work correctly, we need to use border-box as this option includes all margin,
+ * padding and borders when calculating widths - a requirement for our grid system.
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Set box sizing value
+ */
+
+
+/**
+ * [1]  Set box sizing value
+ *
+ *      We set the border-box value on the root element and inherit
+ *      throughout the site to allow greater control.
+ *
+ *      For instance, if we want all elements in a .o-pod to be content-box,
+ *      we could use the below and it would inherit to all its children.
+ *
+ *      .o-pod {
+ *          box-sizing: content-box;
+ *      }
+ *
+ *
+ *      [a] We need to set to pseudo elements also
+ */
+
+html {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+* {
+    &,
+    &:before,
+    &:after { // [a]
+        -webkit-box-sizing: inherit;
+           -moz-box-sizing: inherit;
+                box-sizing: inherit;
+    }
+}
