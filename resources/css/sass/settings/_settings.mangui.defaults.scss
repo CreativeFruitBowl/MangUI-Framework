@@ -73,6 +73,8 @@ $mangui-is-responsive--large: 	false !default; 	// [c]
  * 			by 2, 4 and 8 which makes for rounder em and rem measurements.
  * 		[e]	Define our base line height - 24px works well with the 16px base font size - the
  * 			extra line height makes for easier reading with blocks of text.
+ * 		[f]	Define heading sizes (h1 - h6)
+ * 		[g]	Define certain container sizes
  */
 
 $mangui-breakpoints:				('palm' 	'(max-width: 480px)',
@@ -84,8 +86,20 @@ $mangui-breakpoints:				('palm' 	'(max-width: 480px)',
 $mangui-max-width: 					960px !default;												// [b]
 $mangui-vertical-rhythm:			24px !default;												// [c]
 $mangui-base-font-size--unitless:	16 !default;												// [d]
-$mangui-base-font-size:				$mangui-base-font-size--unitless+px !default;				// [d]
+$mangui-base-font-size:				$mangui-base-font-size--unitless + px !default;				// [d]
 $mangui-base-line-height:			24px !default;												// [e]
+
+
+$size--heading-1:					48px !default;												// [f]
+$size--heading-2:					36px !default;												// [f]
+$size--heading-3:					24px !default;												// [f]
+$size--heading-4:					22px !default;												// [f]
+$size--heading-5:					18px !default;												// [f]
+$size--heading-6:					16px !default;												// [f]
+
+
+$mangui-container--narrow:			600px !default;												// [g]
+$mangui-container--readability:		768px !default;												// [g]
 
 
 
@@ -118,3 +132,19 @@ $mangui-gutter:					$mangui-vertical-rhythm !default; 					// [d]
 $mangui-breakpoint-has-widths:	('palm', 'lap', 'portable', 'desk') !default;		// [e]
 $mangui-breakpoint-has-push:	('palm', 'lap', 'portable', 'desk') !default;		// [e]
 $mangui-breakpoint-has-pull:	('palm', 'lap', 'portable', 'desk') !default;		// [e]
+
+
+
+
+
+/**
+ * [4]	Default colours
+ *
+ * 		There are some default colours used through the framework - 
+ * 		for example links.
+ *
+ * 		These colours should be overwritten in your theme files.
+ */
+
+$colour--links:			#1cb6c3;
+$colour--links-hover:	#093f43;

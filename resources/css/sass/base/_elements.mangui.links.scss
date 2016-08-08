@@ -39,7 +39,6 @@
 a {
     text-decoration: none;				// [a]
     color: $colour--links;				// [b]
-    @extend %transition--250;
 
 
     &:hover,

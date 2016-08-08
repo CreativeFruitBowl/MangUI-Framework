@@ -42,7 +42,7 @@
 html {
     padding: 0;														// [a]
 	min-height: 100%;												// [b]
-    font-size: ($mangui-base-font-size / 16px) * 1em;				// [c]
+    font-size: ($mangui-base-font-size--unitless / 16) * 1em;				// [c]
     line-height: $mangui-base-line-height / $mangui-base-font-size;	// [c]
 }
 
