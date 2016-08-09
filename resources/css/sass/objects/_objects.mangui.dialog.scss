@@ -1,0 +1,88 @@
+/**
+ * [Object] Dialog
+ *
+ * To be teamed up with the a11y-dialog:
+ * https://github.com/edenspiekermann/a11y-dialog
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Dialog: Container
+ * [2]  Dialog: Overlay
+ * [3]  Dialog: Content
+ */
+
+
+/**
+ * [1]  Dialog: Container
+ */
+
+.o-dialog {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999999;
+
+
+    &[aria-hidden=true] {
+        display: none;
+    }
+}
+
+
+
+
+
+/**
+ * [2]  Dialog: Overlay
+ */
+
+.o-dialog__overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.85);
+}
+
+
+
+
+
+/**
+ * [3]  Dialog: Content
+ */
+
+.o-dialog__content {
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    overflow: auto;
+    max-height: 90%;
+    background: #FFF;
+    position: absolute;
+    @include rempx(padding, $mangui-vertical-rhythm*2);
+    @include mangui-transform(translateX(-50%) translateY(-50%));
+    @include mangui-breakpoint(palm) { @include rempx(padding, $mangui-vertical-rhythm*2 $mangui-vertical-rhythm:); }
+}

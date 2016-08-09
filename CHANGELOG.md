@@ -35,3 +35,4 @@
 * [SASS] Added containers to the framework
 * [SASS] Added the panel object to the framework - a panel is a full width section of a page - you'll have multiple panels in a page
 * [SASS] Added navigation core styling to the SASS for the framework
+* [SASS] Added a11y compliant dialog modals - currently only the SASS is in place - the Javascript plugin will be added later.
