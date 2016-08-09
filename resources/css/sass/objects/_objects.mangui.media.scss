@@ -1,0 +1,115 @@
+/**
+ * [Object] Media
+ *
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Core media object
+ * [2]  Reversed image location (right instead of left)
+ * [3]  Media body
+ * [4]  Variants
+ */
+
+
+/**
+ * [1]  Core media object
+ */
+
+.o-media {
+	display: block;
+	@extend %u-clearfix;
+}
+
+
+	.o-media__image {
+		float: left;
+		margin-right: $mangui-vertical-rhythm;
+		@include mangui-breakpoint(portable) { margin-right: 0; }
+	}
+
+
+	.o-media__title {
+		text-align: left;
+		@include rempx(margin-top, 10px);
+	}
+
+
+
+
+
+/**
+ * [2]  Reversed image location (right instead of left)
+ */
+
+.o-media__image--rev {
+	float: right;
+	margin-left: $mangui-vertical-rhythm;
+	@include mangui-breakpoint(portable) { margin-left: 0; }
+}
+
+	.o-media__image img,
+	.o-media__image--rev img {
+		display: block;
+	}
+
+
+
+
+
+/**
+ * [3]  Media body
+ */
+
+.o-media__body {
+	overflow: hidden;
+
+	@include mangui-breakpoint(portable) {
+		float: left;
+		width: 100%;
+		@include rempx(max-width, 600px);
+		@include rempx(padding, 10px 10px 0);
+	}
+}
+
+	.o-media__body,
+	.o-media__body > :last-child{
+		margin-bottom: 0;
+	}
+
+
+
+
+
+/**
+ * [4]  Variants
+ */
+
+.o-islet .o-media__image {
+	margin-right: $mangui-vertical-rhythm;
+}
+
+
+.o-islet .o-media__image--rev {
+	margin-left: $mangui-vertical-rhythm;
+}
