@@ -1,0 +1,237 @@
+/**
+ * [Object] Carousels
+ *
+ * The styling in this document is for the OwlCarousel jQuery plugin (it's shipped with MangUI).
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	OwlCarousel: Core
+ * [2]	OwlCarousel: Wrapper
+ * [3]	OwlCarousel: Navigation
+ * [4]	OwlCarousel: States
+ * [5]	OwlCarousel: Allow text selection
+ * [6]	OwlCarousel: Right text language
+ * [7]	OwlCarousel: Animations
+ * [8]	OwlCarousel: No Javascript
+ * [9]	OwlCarousel: Auto-height
+ */
+
+
+/**
+ * [1]	OwlCarousel: Core
+ *
+ * 		[a]	Fix webkit rendering fonts issue
+ * 		[b]	Fix webkit flashing background issue
+ */
+
+.owl-carousel {
+	z-index: 1;									// [a]
+	width: 100%;								
+	display: none;								
+	position: relative;							// [a]
+	-webkit-tap-highlight-color: transparent;	
+
+
+
+
+
+	/**
+	 * [2]	OwlCarousel: Wrapper
+	 */
+
+	.owl-stage {
+		position: relative;
+		-ms-touch-action: pan-Y;
+
+
+		&::after {
+			height: 0;
+			clear: both;
+			content: '.';
+			display: block;
+			line-height: 0;
+			visibility: hidden;
+		}
+	}
+
+
+	.owl-stage-outer {
+		overflow: hidden;
+		position: relative;
+		-webkit-transform: translate3d(0px, 0px, 0px);	// [b]
+	}
+
+
+	.owl-item {
+		float: left;
+		min-height: 1px;
+		position: relative;
+		-webkit-touch-callout: none;
+		-webkit-backface-visibility: hidden;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		        user-select: none;
+
+
+		.owl-lazy {
+			opacity: 0;
+			@include mangui-transition(ease-in-out 500ms opacity);
+		}
+	}
+
+
+
+
+
+	/**
+	 * [3]	OwlCarousel: Navigation
+	 */
+
+	.owl-controls {
+		.owl-nav .owl-prev,
+		.owl-nav .owl-next,
+		.owl-dot {
+			cursor: pointer;
+			cursor: hand;
+			-webkit-user-select: none;
+			 -khtml-user-select: none;
+			   -moz-user-select: none;
+			    -ms-user-select: none;
+			        user-select: none;
+
+		}
+	}
+
+
+
+
+
+	/**
+	 * [4]	OwlCarousel: States
+	 */
+
+	&.owl-loaded { display: block; }
+	&.owl-hidden { opacity: 0; }
+	&.owl-refresh .owl-item { display: none; }
+
+
+	&.owl-loading {
+		opacity: 0;
+		display: block;
+	}
+
+
+
+
+
+	/**
+	 * [5]	OwlCarousel: Allow text selection
+	 */
+
+	.owl-text-select-on {
+		.owl-item {
+			-webkit-user-select: auto;
+			   -moz-user-select: auto;
+			    -ms-user-select: auto;
+			        user-select: auto;
+		}
+	}
+
+
+	.owl-grab {
+		cursor: move;
+		cursor: -webkit-grab;
+		cursor: -o-grab;
+		cursor: -ms-grab;
+		cursor: grab;
+	}
+
+
+
+
+
+	/**
+	 * [6]	OwlCarousel: Right text language
+	 */
+
+	.owl-rtl {
+		direction: rtl;
+		.owl-item { float: right; }
+	}
+
+
+
+
+
+	/**
+	 * [7]	OwlCarousel: Animations
+	 */
+	
+	.animated {
+		-webkit-animation-fill-mode: both;
+		        animation-fill-mode: both;
+		-webkit-animation-duration: 1000ms;
+		        animation-duration: 1000ms;
+	}
+
+
+	.owl-animated-in  { z-index: 0; }
+	.owl-animated-out { z-index: 1; }
+
+
+	.fadeOut {
+		-webkit-animation-name: fadeOut;
+		        animation-name: fadeOut;
+	}
+
+
+	@include mangui-keyframes(fadeOut) {
+		0%   { opacity: 0; }
+		100% { opacity: 1; }
+	}
+}
+
+
+
+
+
+/**
+ * [8]	OwlCarousel: No Javascript
+ */
+
+.no-js .owl-carousel {
+	display: block;
+}
+
+
+
+
+
+/**
+ * [9]	OwlCarousel: Auto-height
+ */
+
+.owl-height {
+	@include mangui-transition(ease-in-out 500ms height);
+}

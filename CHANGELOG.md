@@ -37,3 +37,4 @@
 * [SASS] Added navigation core styling to the SASS for the framework
 * [SASS] Added a11y compliant dialog modals - currently only the SASS is in place - the Javascript plugin will be added later.
 * [SASS] Added new media object to framework.
+* [SASS] Added new styling for owlCarousel - the jQuery based carousel plugin (note: Javascript not included as part of the framework, yet).
