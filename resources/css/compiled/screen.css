@@ -3052,23 +3052,203 @@ blockquote p:last-of-type:after {
 }
 
 /**
- * [Object] Carousels
+ * [Object] Dialog
  *
- * The styling in this document is for the OwlCarousel jQuery plugin (it's shipped with MangUI).
+ * To be teamed up with the a11y-dialog:
+ * https://github.com/edenspiekermann/a11y-dialog
  *
- * @category	objects
- * @package		mangui
- * @author		Andi North <andi@mangopear.co.uk>
- * @copyright	2016: Mangopear creative
- * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
- * @since   	1.0.0
- * @version   	1.0.0
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
  */
 /**
  * CHANGELOG
  *
- * @version 1.0.0
- *          Initial styles and structure
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+/**
+ * CONTENTS
+ *
+ * [1]  Dialog: Container
+ * [2]  Dialog: Overlay
+ * [3]  Dialog: Content
+ */
+/**
+ * [1]  Dialog: Container
+ */
+.o-dialog {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 9999999;
+}
+.o-dialog[aria-hidden=true] {
+  display: none;
+}
+
+/**
+ * [2]  Dialog: Overlay
+ */
+.o-dialog__overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/**
+ * [3]  Dialog: Content
+ */
+.o-dialog__content {
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  overflow: auto;
+  max-height: 90%;
+  background: #FFF;
+  position: absolute;
+  padding: 48px;
+  padding: 3rem;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 480px) {
+  .o-dialog__content {
+    padding: 48px 24px;
+    padding: 3rem 1.5rem;
+  }
+}
+
+/**
+ * [Object] Media
+ *
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
+ */
+/**
+ * CONTENTS
+ *
+ * [1]  Core media object
+ * [2]  Reversed image location (right instead of left)
+ * [3]  Media body
+ * [4]  Variants
+ */
+/**
+ * [1]  Core media object
+ */
+.o-media {
+  display: block;
+}
+
+.o-media__image {
+  float: left;
+  margin-right: 24px;
+}
+@media (max-width: 1023px) {
+  .o-media__image {
+    margin-right: 0;
+  }
+}
+
+.o-media__title {
+  text-align: left;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+
+/**
+ * [2]  Reversed image location (right instead of left)
+ */
+.o-media__image--rev {
+  float: right;
+  margin-left: 24px;
+}
+@media (max-width: 1023px) {
+  .o-media__image--rev {
+    margin-left: 0;
+  }
+}
+
+.o-media__image img,
+.o-media__image--rev img {
+  display: block;
+}
+
+/**
+ * [3]  Media body
+ */
+.o-media__body {
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .o-media__body {
+    float: left;
+    width: 100%;
+    max-width: 600px;
+    max-width: 37.5rem;
+    padding: 10px 10px 0;
+    padding: 0.625rem 0.625rem 0;
+  }
+}
+
+.o-media__body,
+.o-media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * [4]  Variants
+ */
+.o-islet .o-media__image {
+  margin-right: 24px;
+}
+
+.o-islet .o-media__image--rev {
+  margin-left: 24px;
+}
+
+/**
+ * [Object] Carousels
+ *
+ * The styling in this document is for the OwlCarousel jQuery plugin (it's shipped with MangUI).
+ *
+ * @package     mangui
+ * @category    styles
+ * @version     1.0.0.alpha.3
+ * @since       1.0.0.alpha.3
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/mangui/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+/**
+ * CHANGELOG
+ *
+ * 1.0.0.alpha.3
+ *          Init file
  */
 /**
  * CONTENTS
@@ -3236,186 +3416,6 @@ blockquote p:last-of-type:after {
 .owl-height {
   -webkit-transition: ease-in-out 500ms height;
   transition: ease-in-out 500ms height;
-}
-
-/**
- * [Object] Dialog
- *
- * To be teamed up with the a11y-dialog:
- * https://github.com/edenspiekermann/a11y-dialog
- *
- * @category    objects
- * @package     mangui
- * @author      Andi North <andi@mangopear.co.uk>
- * @copyright   2016: Mangopear creative
- * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
- * @since       1.0.0
- * @version     1.0.0
- */
-/**
- * CHANGELOG
- *
- * @version 1.0.0
- *          Initial styles and structure
- */
-/**
- * CONTENTS
- *
- * [1]  Dialog: Container
- * [2]  Dialog: Overlay
- * [3]  Dialog: Content
- */
-/**
- * [1]  Dialog: Container
- */
-.o-dialog {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  z-index: 9999999;
-}
-.o-dialog[aria-hidden=true] {
-  display: none;
-}
-
-/**
- * [2]  Dialog: Overlay
- */
-.o-dialog__overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.85);
-}
-
-/**
- * [3]  Dialog: Content
- */
-.o-dialog__content {
-  top: 50%;
-  left: 50%;
-  width: 95%;
-  overflow: auto;
-  max-height: 90%;
-  background: #FFF;
-  position: absolute;
-  padding: 40px 50px;
-  padding: 2.5rem 3.125rem;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-@media (max-width: 480px) {
-  .o-dialog__content {
-    padding: 40px 20px;
-    padding: 2.5rem 1.25rem;
-  }
-}
-
-/**
- * [Object] Media
- *
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- *
- * @category    objects
- * @package     mangui
- * @author      Andi North <andi@mangopear.co.uk>
- * @copyright   2016: Mangopear creative
- * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
- * @since       1.0.0
- * @version     1.0.0
- */
-/**
- * CHANGELOG
- *
- * @version 1.0.0
- *          Initial styles and structure
- */
-/**
- * CONTENTS
- *
- * [1]  Core media object
- * [2]  Reversed image location (right instead of left)
- * [3]  Media body
- * [4]  Variants
- */
-/**
- * [1]  Core media object
- */
-.o-media {
-  display: block;
-}
-
-.o-media__image {
-  float: left;
-  margin-right: 24px;
-}
-@media (max-width: 1023px) {
-  .o-media__image {
-    margin-right: 0;
-  }
-}
-
-.o-media__title {
-  text-align: left;
-  margin-top: 10px;
-  margin-top: 0.625rem;
-}
-
-/**
- * [2]  Reversed image location (right instead of left)
- */
-.o-media__image--rev {
-  float: right;
-  margin-left: 24px;
-}
-@media (max-width: 1023px) {
-  .o-media__image--rev {
-    margin-left: 0;
-  }
-}
-
-.o-media__image img,
-.o-media__image--rev img {
-  display: block;
-}
-
-/**
- * [3]  Media body
- */
-.o-media__body {
-  overflow: hidden;
-}
-@media (max-width: 1023px) {
-  .o-media__body {
-    float: left;
-    width: 100%;
-    max-width: 600px;
-    max-width: 37.5rem;
-    padding: 10px 10px 0;
-    padding: 0.625rem 0.625rem 0;
-  }
-}
-
-.o-media__body,
-.o-media__body > :last-child {
-  margin-bottom: 0;
-}
-
-/**
- * [4]  Variants
- */
-.o-islet .o-media__image {
-  margin-right: 24px;
-}
-
-.o-islet .o-media__image--rev {
-  margin-left: 24px;
 }
 
 /**

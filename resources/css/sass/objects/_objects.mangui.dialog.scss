@@ -84,5 +84,5 @@
     position: absolute;
     @include rempx(padding, $mangui-vertical-rhythm*2);
     @include mangui-transform(translateX(-50%) translateY(-50%));
-    @include mangui-breakpoint(palm) { @include rempx(padding, $mangui-vertical-rhythm*2 $mangui-vertical-rhythm:); }
+    @include mangui-breakpoint(palm) { @include rempx(padding, $mangui-vertical-rhythm*2 $mangui-vertical-rhythm); }
 }
