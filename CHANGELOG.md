@@ -38,3 +38,4 @@
 * [SASS] Added a11y compliant dialog modals - currently only the SASS is in place - the Javascript plugin will be added later.
 * [SASS] Added new media object to framework.
 * [SASS] Added new styling for owlCarousel - the jQuery based carousel plugin (note: Javascript not included as part of the framework, yet).
+* [SASS] Added screenshot to the framework to ensure a basic theme shows up correctly in the WordPress admin dashboard.
