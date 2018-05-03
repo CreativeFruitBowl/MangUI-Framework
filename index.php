@@ -19,4 +19,12 @@
 
 	get_header();
 
-?><?php get_footer(); ?>
+?>
+
+
+	<main class="main" id="main">
+		Insert your content here.
+	</main>
+
+
+<?php get_footer(); ?>
