@@ -1,32 +1,22 @@
 <?php
 
-/**
- * [Core WordPress Template] Index
- *
- * The index template is the default template WordPress uses for the homepage - unless a 
- * home.php template exists within the theme.
- *
- * The index template is also the default template used for listing posts - for instance
- * a blog index.
- *
- * @package     mangui
- * @category    core-templates
- * @since       1.0.0.alpha.4
- * @version     1.0.0.alpha.4
- * @author      Andi North <andi@mangopear.co.uk>
- * @link        https://mangopear.co.uk/mangui/
- * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
- */
+	/**
+	 * Core template: Index
+	 *
+	 * This template serves as the default for all views. Can easily be overwritten 
+	 * by other templates. Typically this will be used for either the front page or 
+	 * as the list of posts.
+	 *
+	 * @category 	Templates
+	 * @package  	mangui
+	 * @author  	Andi North <andi@mangopear.co.uk>
+	 * @copyright  	2018 Mangopear creative
+	 * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+	 * @version  	4.0.0
+	 * @since   	1.0.0
+	 */
 
 
-/**
- * CHANGELOG
- *
- * @version 1.0.0.alpha.4
- *          Init file
- *          Add header and footer calls
- */
+	get_header();
 
-get_header();
-
-get_footer();
+?><?php get_footer(); ?>
