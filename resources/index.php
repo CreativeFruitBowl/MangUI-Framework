@@ -7,13 +7,16 @@
 	 * the directory from the web server. For your website's security, this file
 	 * needs to remain in place.
 	 *
-	 * @package  	MangUI
-	 * @version  	2.0.0
-	 * @since   	2.0.0
+	 * @category 	security
+	 * @package  	mangui
 	 * @author  	Andi North <andi@mangopear.co.uk>
-	 * @link 		https://ui.mangopear.co.uk
-	 * @copyright  	2018 Mangopear Limited
+	 * @copyright  	2018 Mangopear creative
 	 * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+	 * @version  	2.0.0
+	 * @since   	1.0.0
 	 */
-	
+
+
+	get_header();
+
 ?>
