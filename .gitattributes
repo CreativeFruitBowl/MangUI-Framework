@@ -1,0 +1,8 @@
+# Setup Git to not show a diff for our compiled files
+
+# Compiled CSS and SASS Map files
+resources/css/compiled/*.css -diff
+resources/css/compiled/*.map -diff
+
+# Compiled JS
+resources/js/compiled/*.js -diff
