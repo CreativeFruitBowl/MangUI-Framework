@@ -1,45 +1,13 @@
 # Changelog
 
-## 1.0.0.alpha
+Changes are showing in descending order.
 
-* Initial setup of the MangUI framework.
 
-## 1.0.0.alpha.1
+## 2.0.0
 
-* Added README, CHANGELOG, CONTRIBUTING and LICENSE documents.
-* Added Gulp and NPM requirements for concatenation and minification of SASS and Javascript assets.
-* Initialised folder structure for resources.
-* Initialised folder structure for functions.
+* Updated documentation through all `index.php` files
 
-## 1.0.0.alpha.2
 
-* [SASS] Added default MangUI settings.
-* [SASS] Added tools for animations.
-* [SASS] Added tools for CSS breakpoints (for responsive layouts).
-* [SASS] Added tools for placeholder CSS output - saves you from having to remember it!
-* [SASS] Added tools for converting px based measurements to rem for better scaling.
-* [SASS] Added tools for shading and tinting colours - use variables or HEX/RGB values - nice and simple.
-* [SASS] Added tools for outputting CSS3 compliant transformations.
-* [SASS] Added tools for creating transitions within SASS.
+## Changes made before version 2
 
-## 1.0.0.alpha.3
-
-* [SASS] Added generic box sizing values to ensure compatibility with containers and grids.
-* [SASS] Added generic clearfix rule with class and SASS pseudo classes.
-* [SASS] Added generic class (and SASS pseudo class) for accessibly hiding elements.
-* [SASS] Added normalize.css.
-* [SASS] Added generic rules for HTML elements that share spacing (lists, headings, tables etc).
-* [SASS] Added basic styling for core elements - html, body, headings, images, lists, links, quotes etc.
-* [SASS] Added CSS Wizardry grid system to the framework - added some additional grid layouts too.
-* [SASS] Fixed issues with SASS failing to compile.
-* [SASS] Added containers to the framework.
-* [SASS] Added the panel object to the framework - a panel is a full width section of a page - you'll have multiple panels in a page.
-* [SASS] Added navigation core styling to the SASS for the framework.
-* [SASS] Added a11y compliant dialog modals - currently only the SASS is in place - the Javascript plugin will be added later.
-* [SASS] Added new media object to framework.
-* [SASS] Added new styling for owlCarousel - the jQuery based carousel plugin (note: Javascript not included as part of the framework, yet).
-* [SASS] Added screenshot to the framework to ensure a basic theme shows up correctly in the WordPress admin dashboard.
-
-## 1.0.0.alpha.4
-
-* [Setup] Added new PHP class to setup various theme settings - including switching over WordPress default options for media insertion, adding MangUI classes to elements, enqueuing assets and much more.
+All of these changes have been removed from the changelog. Version 2 is almost a complete rebuild of the framework so the changes from earlier versions are entirely irrelevant.
