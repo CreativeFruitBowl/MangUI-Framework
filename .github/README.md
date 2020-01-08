@@ -1,3 +1,11 @@
+# This repository is no longer being maintained.
+
+You'll need to head over to the new repositories for the up to date code: https://github.com/mangopear-framework
+
+
+-----
+
+
 <p align="center">
   <a href="https://ui.mangopear.co.uk/">
     <img src="https://mangopear.co.uk/ui/mangui-logo.jpg" alt="">
